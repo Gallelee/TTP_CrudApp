@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#camp-top {
+  display: inline;
+}
+
+#campus-head {
+  float: left;
+}
+
+#add-campus {
+  float: right;
+  margin-right: 10%;
+  margin-top: 3%;
+}
