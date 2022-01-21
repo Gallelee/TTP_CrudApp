@@ -27,7 +27,7 @@ export default function Students(){
                 .map(elm => {
                     return(
                         <div className="mini-student-card">
-                            <img src={noImage}/>
+                            <img src={elm.studentImg}/>
                             <h4>{elm.name}</h4>
                         </div>
                     )
