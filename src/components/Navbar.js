@@ -1,12 +1,13 @@
 import React from "react"
-import {Link} from "react-router-dom"
+
 
 
 export default function Navbar(){
 
     return(
-        <div>
-            
+        <div id="nav-bar">
+
+            <h1>Hi, Im the Navbar</h1>
         </div>
     )
 }
