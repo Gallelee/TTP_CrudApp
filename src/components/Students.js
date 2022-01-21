@@ -10,7 +10,7 @@ export default function Students(){
 
     useEffect(()=>{
         async function getAllStudents(){
-            const all = await Axios.get("https://jsonplaceholder.typicode.com/users")
+            const all = await Axios.get("https://my-json-server.typicode.com/evs09/CRUD-App-Placeholder-Data/db") //dummy data from dummy api
             console.log(all)
             setAllStudents(all)
         }
@@ -18,12 +18,12 @@ export default function Students(){
     }, [])
 
 
-    
+
     return(
         <div>
             <h1>All Students</h1>
             <div id="students">
-                {allStudents? allStudents.data
+                {allStudents? allStudents.data.students
                 .map(elm => {
                     return(
                         <div className="mini-student-card">
