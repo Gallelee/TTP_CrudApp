@@ -21,9 +21,9 @@ export default function Students(){
 
 
     return(
-        <div>
+        <div id="students-page">
             <h1>All Students</h1>
-            <Link to="/AddStudent">Add Student</Link>
+            <h1><Link to="/AddStudent">Add Student</Link></h1>
             <div id="students">
                 {allStudents? allStudents.data.students
                 .map(elm => {

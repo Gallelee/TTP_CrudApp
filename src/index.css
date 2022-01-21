@@ -84,3 +84,11 @@ code {
   background-color: lightgray;
   margin-right: 50px;
 }
+
+#students-page a{
+  background-color: turquoise;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white
+}
