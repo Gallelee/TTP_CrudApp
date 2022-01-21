@@ -7,6 +7,7 @@ import Students from './components/Students';
 import Campuses from './components/Campuses'
 import All_Campuses from './components/All_Campuses'
 import Navbar from './components/Navbar'
+import EditCampus from './components/EditCampus'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<All_Campuses />} />
           <Route path="/Students" element={<Students/>}/> 
           <Route path="/Campuses" element={<Campuses/>}/>
+          <Route path="/EditCampus" element={<EditCampus />}/>
         </Routes>
 
         

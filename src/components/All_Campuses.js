@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
 export default function All_Campuses(){
 
@@ -23,7 +24,7 @@ export default function All_Campuses(){
                             <h3 className="camp-name"> Campus Name </h3>
                             <p className="camp-p">Num students </p>
                             <div>
-                                <p className="camp-ed"><a href="#">Edit</a></p>
+                                <p className="camp-ed"> <Link to ="/EditCampus">Edit</Link></p>
                                 <button className="camp-del">Delete</button>
                             </div>
                         </td>
