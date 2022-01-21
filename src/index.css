@@ -13,15 +13,49 @@ code {
 }
 
 #camp-top {
-  display: inline;
+  overflow: hidden;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 #campus-head {
-  float: left;
+  display:inline;
+  margin-right: 40%;
+  margin-left: 0;
+  
 }
 
 #add-campus {
-  float: right;
-  margin-right: 10%;
-  margin-top: 3%;
+  display:inline;
+  margin-left: auto;
+  margin-right: 0;
+  
+}
+
+.campus-box {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.camp-img{
+  padding: 10px;
+  max-height: 400px;
+}
+
+.camp-name {
+  margin-bottom: 10px;
+
+}  
+
+.camp-ed {
+  display: inline;
+  margin-right: 15px;
+
+}
+
+.camp-del {
+  display: inline;
+  margin-left: 15px;
 }

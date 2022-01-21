@@ -1,5 +1,4 @@
 import React from "react"
-import Navbar from "./Navbar"
 
 export default function All_Campuses(){
 
@@ -8,16 +7,30 @@ export default function All_Campuses(){
     return(
         <div>
 
-            <Navbar />
             <div id="camp-top">
                 <h1 id="campus-head"> All Campuses </h1>
                 <button id="add-campus">Add Campus </button>
             </div>
             
-            <div class="campus-box">
-                <img src="#" className="camp-img" />
-                <h3 className="camp-name"> Campus Name </h3>
-                <p className="camp-p">Num students </p>
+            {/* for loop to be added here */}
+            <div className="campus-box">
+                <table>
+                    <tr>
+                        <td>
+                            <img src="#" className="camp-img" />
+                        </td>
+                        <td>
+                            <h3 className="camp-name"> Campus Name </h3>
+                            <p className="camp-p">Num students </p>
+                            <div>
+                                <p className="camp-ed"><a href="#">Edit</a></p>
+                                <button className="camp-del">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+                
 
             </div>
 
