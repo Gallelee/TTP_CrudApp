@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Axios from "axios"
 
 export default function ShowStudent(){
-    const[student, setStudent] = useState({})
+    const[student, setStudent] = useState(null)
 
     useEffect(() => {
         async function getStudent(){
@@ -17,7 +17,7 @@ export default function ShowStudent(){
     return(
         <div>
             <h1>im the showstudent component</h1>
-            <h1>{student.data.name}</h1>
+            <h1>{student? student.data.name: "nothing to see here yet"}</h1>
         </div>
     )
 }
