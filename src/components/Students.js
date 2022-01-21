@@ -1,4 +1,5 @@
 import React, { useEffect , useState } from "react"
+import {Link} from "react-router-dom"
 import ShowStudent from "./ShowStudent"
 import Axios from "axios"
 import noImage from "../images/noImage.png"
@@ -22,6 +23,7 @@ export default function Students(){
     return(
         <div>
             <h1>All Students</h1>
+            <Link to="/AddStudent">Add Student</Link>
             <div id="students">
                 {allStudents? allStudents.data.students
                 .map(elm => {
