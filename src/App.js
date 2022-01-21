@@ -3,18 +3,29 @@ import './App.css';
 import React from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home'
+import Students from './components/Students';
+import Campuses from './components/Campuses'
 import All_Campuses from './components/All_Campuses'
 import Navbar from './components/Navbar'
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      
       <Router>
+
+        <Navbar/>
+
         <Routes>
-          <Route path="/" element={<All_Campuses />} /> 
+          <Route path="/" element={<All_Campuses />} />
+          <Route path="/Studens" element={<Students/>}/> 
+          <Route path="/Campuses" element={<Campuses/>}/>
         </Routes>
+
+        
+
       </Router>
+
     </div>
   );
 }
