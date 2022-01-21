@@ -16,19 +16,25 @@ export default function Students(){
         }
         getAllStudents()
     }, [])
+
+
+    
     return(
-        <div id="students">
-            {allStudents? allStudents.data
-            .map(elm => {
-                return(
-                    <div className="mini-student-card">
-                        <img src={noImage}/>
-                        <h4>{elm.name}</h4>
-                    </div>
-                )
-            }) : "Nothing to see here"
-        }
+        <div>
+            <h1>All Students</h1>
+            <div id="students">
+                {allStudents? allStudents.data
+                .map(elm => {
+                    return(
+                        <div className="mini-student-card">
+                            <img src={noImage}/>
+                            <h4>{elm.name}</h4>
+                        </div>
+                    )
+                }) : "Nothing to see here"
+            }
             
+            </div>
         </div>
     )
         

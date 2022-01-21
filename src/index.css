@@ -66,3 +66,21 @@ code {
   padding-top: 2%;
   padding-bottom: 2%;
 }
+
+#students{
+  display: inline-flex;
+  margin-top: 50px;
+}
+
+.mini-student-card img{
+  height:200px;
+  margin: 30px;
+  background-color: white;
+}
+
+.mini-student-card{
+  border: solid black 1px;
+  width: fit-content;
+  background-color: lightgray;
+  margin-right: 50px;
+}
