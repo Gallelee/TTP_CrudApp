@@ -24,10 +24,11 @@ export default function ShowStudent(){
     
     return(
         <div id="student-page">
-            <h1>im the showstudent component</h1>
-            <img src={student.data[0].studentImg} alt="No image image"/> {/*Placer holder image */} 
+            
+            <img src={student? student.data[0].studentImg : noImage} alt="No image image"/> {/*Placer holder image */} 
             <h1>{student? student.data[0].name: "nothing to see here yet"}</h1>
-            <h4>GPA: N/A</h4>
+            <h4>Email: N/A</h4>
+            <h4>GPA: {student? student.data[0].gpa : "N/A"}</h4>
             <Link to="/EditStudent">EDIT</Link>
         </div>
     )
