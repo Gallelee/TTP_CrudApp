@@ -28,10 +28,12 @@ export default function Students(){
                 {allStudents? allStudents.data.students
                 .map(elm => {
                     return(
+                    <Link to={`${elm.studentId}`}>
                         <div className="mini-student-card">
                             <img src={elm.studentImg}/>
                             <h4>{elm.name}</h4>
                         </div>
+                    </Link>
                     )
                 }) : "Nothing to see here"
             }
