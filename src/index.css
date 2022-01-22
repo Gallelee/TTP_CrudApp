@@ -107,3 +107,17 @@ code {
   border-radius: 0px;
 }
 
+#student-page{
+ display: flex; 
+ margin-left: 100px;
+ margin-top: 100px;
+}
+
+#student-page-info{
+  margin-left: 400px;
+}
+
+#student-page img{
+  max-height: 500px;
+}
+
