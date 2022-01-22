@@ -10,6 +10,7 @@ import Navbar from './components/Navbar'
 import EditCampus from './components/EditCampus'
 import EditSingleStudent from './components/EditSingleStudent';
 import AddStudentForm from './components/AddStudentForm';
+import ShowStudent from './components/ShowStudent';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/EditCampus" element={<EditCampus />}/>
           <Route path="/EditStudent" element={<EditSingleStudent/>}/>
           <Route path="/AddStudent" element={<AddStudentForm/>}/>
+          <Route path="/Students/:studentId" element={<ShowStudent/>}/>
         </Routes>
 
         
