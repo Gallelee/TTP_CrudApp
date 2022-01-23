@@ -12,8 +12,11 @@ export default function AddStudentForm(){
 
                 email: ev.target[2].value
             }).then(res => console.log(res))
-            .catch(err => console.log(err))
-            console.log(ev.target[0].value)
+            .catch(err => {
+                
+                console.log(err)
+            })
+            
         }
   
 

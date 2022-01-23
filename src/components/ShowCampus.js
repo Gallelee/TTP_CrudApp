@@ -35,8 +35,10 @@ export default function ShowCampuses(){
             <img src={campus? campus.data.imageUrl : noImage}/>
             <div id="campus-page-info">
                 <h1>{campus? campus.data.name : "N/A"}</h1>
+                <p>{campus? campus.data.description : "N/A"}</p>
 
             </div>
+            <p>{campus? campus.data.address : "No address"}</p>
             <h1>Students on Campus</h1>
             <div id="camp-stu-card">
                 {campus? campus.data.students.map(elm => <StudentMiniCard id={elm.id} imageUrl={elm.imageUrl} firstName={elm.firstName} lastName={elm.lastName}/>) : "There are no students currently registered to this campus"}
