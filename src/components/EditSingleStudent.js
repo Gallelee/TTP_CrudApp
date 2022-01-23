@@ -1,10 +1,12 @@
 import React from "react"
 import Axios from "axios"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 export default function EditSingleStudent(){
 
     const studentId = useParams()
+
+    const navigate = useNavigate()
 
     console.log(studentId.id)
 
@@ -17,6 +19,7 @@ export default function EditSingleStudent(){
         })
         .then(res => console.log(res))
         .catch(err => console.log(err))
+        navigate(`/Students/${studentId.id}`)
     }
 
     
