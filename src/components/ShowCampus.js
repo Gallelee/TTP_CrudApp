@@ -31,12 +31,13 @@ export default function ShowCampuses(){
     
     return(
         <div id="campus">
-            
+            <div id="campus-page-info">        
             <img src={campus? campus.data.imageUrl : noImage}/>
-            <div id="campus-page-info">
-                <h1>{campus? campus.data.name : "N/A"}</h1>
-                <p>{campus? campus.data.description : "N/A"}</p>
+                <div >
+                    <h1>{campus? campus.data.name : "N/A"}</h1>
+                    <p>{campus? campus.data.description : "N/A"}</p>
 
+                </div>
             </div>
             <p>{campus? campus.data.address : "No address"}</p>
             <h1>Students on Campus</h1>
