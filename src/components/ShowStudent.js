@@ -8,9 +8,6 @@ export default function ShowStudent(){
     const[student, setStudent] = useState(null)
 
     const studentId = useParams()
-
-    const [stuCamp, setStuCamp] = useState(null)
-
     
 
     useEffect(() => {
@@ -21,6 +18,13 @@ export default function ShowStudent(){
         }
         getStudent()
     },[])
+
+
+    const handleDelete = () => {
+        Axios.delete(`https://ttpcrup-app.herokuapp.com/api/students/${studentId.studentId}`)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+    }
 
 
     
@@ -36,8 +40,9 @@ export default function ShowStudent(){
                     <h1>{student? student.data.firstName + " " + student.data.lastName: "nothing to see here yet"}</h1>
                     <h4>Email: {student? student.data.email : "N/A"}</h4>
                     <h4>GPA: {student? student.data.gpa : "N/A"}</h4> 
-                    <Link to="/EditStudent">EDIT</Link>
+                    <Link to={`/EditStudent/${studentId.studentId}`}>EDIT</Link>
                 </div>
+                <button onClick={() => handleDelete()}>Delete</button>
 
             </div>
             {student? (student.data.campusId? <CampusCard id={student.data.campus.id} name={student.data.campus.name} imageUrl={student.data.campus.imageUrl}/> : "This student does not attend a college") : "N/A"}

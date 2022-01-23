@@ -26,7 +26,7 @@ function App() {
           <Route path="/Students" element={<Students/>}/> 
           <Route path="/Campus/:campusID" element={<ShowCampuses/>}/>
           <Route path="/EditCampus" element={<EditCampus />}/>
-          <Route path="/EditStudent" element={<EditSingleStudent/>}/>
+          <Route path="/EditStudent/:id" element={<EditSingleStudent/>}/>
           <Route path="/AddStudent" element={<AddStudentForm/>}/>
           <Route path="/Students/:studentId" element={<ShowStudent/>}/>
           <Route path="/AddCampus" element={<AddCampusForm/>}/>
