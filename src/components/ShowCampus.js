@@ -45,9 +45,9 @@ export default function ShowCampuses(){
 
             </div>
             <h1>Students on Campus</h1>
-            {campStudents? campStudents.data.map(elm => <StudentMiniCard studentId={elm.studentId} studentImg={elm.studentImg} name={elm.name}/>) : "There are no students currently registered to this campus"}
-           
-
+            <div id="camp-stu-card">
+                {campStudents? campStudents.data.map(elm => <StudentMiniCard studentId={elm.studentId} studentImg={elm.studentImg} name={elm.name}/>) : "There are no students currently registered to this campus"}
+            </div>
         </div>
     )
 }
