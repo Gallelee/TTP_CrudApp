@@ -4,7 +4,7 @@ import React from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home'
 import Students from './components/Students';
-import ShowCampuses from './components/ShowCampus'
+import ShowCampus from './components/ShowCampus'
 import All_Campuses from './components/All_Campuses'
 import Navbar from './components/Navbar'
 import EditCampus from './components/EditCampus'
@@ -12,6 +12,7 @@ import EditSingleStudent from './components/EditSingleStudent';
 import AddStudentForm from './components/AddStudentForm';
 import ShowStudent from './components/ShowStudent';
 import StudentMiniCard from './components/StudentMiniCard';
+import AddCampusForm from './components/AddCampusForm'
 
 function App() {
   return (
@@ -24,11 +25,12 @@ function App() {
         <Routes>
           <Route path="/" element={<All_Campuses />} />
           <Route path="/Students" element={<Students/>}/> 
-          <Route path="/Campus/:campusID" element={<ShowCampuses/>}/>
+          <Route path="Campus/:campusID" element={<ShowCampus />}/>
           <Route path="/EditCampus" element={<EditCampus />}/>
           <Route path="/EditStudent" element={<EditSingleStudent/>}/>
           <Route path="/AddStudent" element={<AddStudentForm/>}/>
           <Route path="/Students/:studentId" element={<ShowStudent/>}/>
+          <Route path="/AddCampus" element={<AddCampusForm/>}/>
         </Routes>
 
         

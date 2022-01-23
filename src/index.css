@@ -121,3 +121,32 @@ code {
   max-height: 500px;
 }
 
+input, label{
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+#camp-stu-card {
+  display: inline-flex;
+}
+
+#show-camp-tbl {
+  margin: 20px;
+}
+
+#show-camp-img-td {
+  width: 50%;
+}
+
+#show-camp-img {
+  width: 100%;
+}
+
+#student-campus-card {
+  display: inline;
+  width: 30%
+}

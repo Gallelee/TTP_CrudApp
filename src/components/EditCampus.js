@@ -5,14 +5,18 @@ export default function EditCampus(){
         <div id="campus-form">
                 <h1>Edit Campus</h1>
                 <form>
-                    <label>Campus Name</label>
-                    <input type={"text"}/>
-                    <label>Campus Location</label>
-                    <input type={"text"}/> 
-                    <label>Campus Image Url</label>
-                    <input type={"text"}/>
-                    <label>Campus Description</label>
-                    <input type={"text"}/>
+                    <label className="camp-lbl">Campus Name</label>
+                    <input type={"text"} className="camp-inpt"/>
+                    <br />
+                    <label className="camp-lbl">Campus Location</label>
+                    <input type={"text"} className="camp-inpt"/> 
+                    <br />
+                    <label className="camp-lbl">Campus Image Url</label>
+                    <input type={"text"} className="camp-inpt"/>
+                    <br />
+                    <label className="camp-lbl">Campus Description</label>
+                    <input type={"text"} className="camp-inpt"/>
+                    <br />
                     <input type={"submit"}/>
                 </form>
         </div>

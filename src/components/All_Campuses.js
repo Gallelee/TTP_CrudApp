@@ -13,6 +13,7 @@ export default function All_Campuses(){
     useEffect(()=>{
         async function getCampuses(){
             const data = await Axios.get("https://my-json-server.typicode.com/evs09/CRUD-App-Placeholder-Data/db")
+            console.log(data)
             setAllCampuses(data)
         }
 
@@ -24,15 +25,12 @@ export default function All_Campuses(){
 
             <div id="camp-top">
                 <h1 id="campus-head"> All Campuses </h1>
-                <button id="add-campus">Add Campus </button>
+                <button id="add-campus"><Link to="/AddCampus">Add Campus</Link></button>
             </div>
-
-            {/* for loop to be added here */}
             
                 {allCampuses? allCampuses.data.campuses.map(item =>{
                     console.log(item.campusID)
                     return (
-                        <Link to={`/Campus/${item.campusID}`}>
                         <div className="campus-box">
                             <table className="camp-tbl">
                                 <tr>
@@ -40,17 +38,18 @@ export default function All_Campuses(){
                                         <img src={item.campusImg} className="camp-img" />
                                     </td>
                                     <td>
-                                        <h3 className="camp-name">{item.campusName}  </h3>
-                                        <p className="camp-p">{item.enrolled} </p>
+                                        <Link to={`Campus/${item.campusID}`}>
+                                            <h3 className="camp-name">{item.campusName}  </h3>
+                                        </Link>
+                                        <p className="camp-p">{item.enrolled} Student(s) </p>
                                         <div>
-                                            <p className="camp-ed"> <Link to ="/EditCampus">Edit</Link></p>
+                                            <p className="camp-ed"> <Link to="/EditCampus">Edit</Link></p>
                                             <button className="camp-del">Delete</button>
                                         </div>
                                     </td>
                                 </tr>
                             </table>
                         </div>
-                        </Link>
                         
                     )
                 }) : "No Campuses"}
