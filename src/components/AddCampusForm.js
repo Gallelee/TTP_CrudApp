@@ -11,11 +11,13 @@ export default function AddCampus(){
             name: ev.target[0].value,
             address: ev.target[1].value
         })
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
     }
 
 
     return(
-        <form onSubmit={() => handleSubmit()}>
+        <form onSubmit={handleSubmit}>
             <label>Campus Name</label>
             <input type="text"/>
             <label>Address</label>
