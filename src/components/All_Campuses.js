@@ -1,11 +1,14 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
 import Axios from "axios"
 import { useEffect, useState} from "react" 
 
 export default function All_Campuses(){
 
     const [allCampuses, setAllCampuses] = useState(null)
+    
+
+    const campusId = useParams()
 
     useEffect(()=>{
         async function getCampuses(){
@@ -27,7 +30,9 @@ export default function All_Campuses(){
             {/* for loop to be added here */}
             
                 {allCampuses? allCampuses.data.campuses.map(item =>{
+                    console.log(item.campusID)
                     return (
+                        <Link to={`/Campus/${item.campusID}`}>
                         <div className="campus-box">
                             <table className="camp-tbl">
                                 <tr>
@@ -45,6 +50,8 @@ export default function All_Campuses(){
                                 </tr>
                             </table>
                         </div>
+                        </Link>
+                        
                     )
                 }) : "No Campuses"}
 

@@ -11,7 +11,6 @@ export default function StudentMiniCard(props){
                         <div className="mini-student-card">
                             <img src={props.studentImg}/>
                             <h4>{props.name}</h4>
-                            <h3>{props.studentId}</h3>
                         </div>
                     </Link>
     )
