@@ -13,6 +13,7 @@ export default function CampusCard(props){
     */
 
     return(
+        <Link to={`/Campus/${props.id}`}>
         <div id="campus-card">
             <div>
                 <img src={props.imageUrl} alt="image of college"/>
@@ -21,6 +22,7 @@ export default function CampusCard(props){
             <Link to="/EditCampus">Edit</Link>
             <button >Delete</button>
         </div>
+        </Link>
     )
 
 }
