@@ -68,6 +68,10 @@ code {
   margin-left: 15px;
 }
 
+#campus-page-info{
+  display: flex;
+}
+
 #nav-bar{
   margin-top: 2%;
   background-color: lightgray;

@@ -7,10 +7,10 @@ export default function StudentMiniCard(props){
     const studentId = useParams()
 
     return(
-        <Link to={`/Students/${props.studentId}`}>
+        <Link to={`/Students/${props.id}`}>
                         <div className="mini-student-card">
-                            <img src={props.studentImg}/>
-                            <h4>{props.name}</h4>
+                            <img src={props.imageUrl}/>
+                            <h4>{props.firstName} {props.lastName}</h4>
                         </div>
                     </Link>
     )
