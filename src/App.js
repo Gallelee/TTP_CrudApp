@@ -11,6 +11,7 @@ import EditCampus from './components/EditCampus'
 import EditSingleStudent from './components/EditSingleStudent';
 import AddStudentForm from './components/AddStudentForm';
 import ShowStudent from './components/ShowStudent';
+import StudentMiniCard from './components/StudentMiniCard';
 
 function App() {
   return (
