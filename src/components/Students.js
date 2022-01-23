@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 import ShowStudent from "./ShowStudent"
 import Axios from "axios"
 import noImage from "../images/noImage.png"
+import StudentMiniCard from "./StudentMiniCard"
 
 export default function Students(){
 
@@ -28,12 +29,7 @@ export default function Students(){
                 {allStudents? allStudents.data.students
                 .map(elm => {
                     return(
-                    <Link to={`${elm.studentId}`}>
-                        <div className="mini-student-card">
-                            <img src={elm.studentImg}/>
-                            <h4>{elm.name}</h4>
-                        </div>
-                    </Link>
+                        <StudentMiniCard studentId={elm.studentId} studentImg={elm.studentImg} name={elm.name}/>
                     )
                 }) : "Nothing to see here"
             }
