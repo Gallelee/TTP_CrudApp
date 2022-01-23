@@ -10,6 +10,7 @@ export default function All_Campuses(){
 
     const campusId = useParams()
 
+
     const navigate = useNavigate()
 
     useEffect(()=>{
@@ -57,6 +58,7 @@ export default function All_Campuses(){
                                                                             Axios.delete(`https://ttpcrup-app.herokuapp.com/api/campuses/${item.id}`)//onclick for deleting the campus
                                                                             .then(res => console.log(res))
                                                                             .catch(err => console.log(err))
+                                                                            setTimeout(() => navigate('/Campuses'),1000)
                                                                             }
                                             } >Delete</button>
                                         </div>
