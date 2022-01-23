@@ -12,7 +12,7 @@ export default function Students(){
 
     useEffect(()=>{
         async function getAllStudents(){
-            const all = await Axios.get("https://my-json-server.typicode.com/evs09/CRUD-App-Placeholder-Data/db") //dummy data from dummy api
+            const all = await Axios.get("https://ttpcrup-app.herokuapp.com/api/students/") //dummy data from dummy api
             console.log(all)
             setAllStudents(all)
         }
@@ -26,10 +26,10 @@ export default function Students(){
             <h1>All Students</h1>
             <h1><Link to="/AddStudent">Add Student</Link></h1>
             <div id="students">
-                {allStudents? allStudents.data.students
+                {allStudents? allStudents.data
                 .map(elm => {
                     return(
-                        <StudentMiniCard studentId={elm.studentId} studentImg={elm.studentImg} name={elm.name}/>
+                        <StudentMiniCard id={elm.id} imageUrl={elm.imageUrl} firstName={elm.firstName} lastName={elm.lastName}/>
                     )
                 }) : "Nothing to see here"
             }

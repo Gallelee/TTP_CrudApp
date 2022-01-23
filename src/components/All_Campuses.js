@@ -12,7 +12,7 @@ export default function All_Campuses(){
 
     useEffect(()=>{
         async function getCampuses(){
-            const data = await Axios.get("https://my-json-server.typicode.com/evs09/CRUD-App-Placeholder-Data/db")
+            const data = await Axios.get("https://ttpcrup-app.herokuapp.com/api/campuses/")
             setAllCampuses(data)
         }
 
@@ -29,18 +29,18 @@ export default function All_Campuses(){
 
             {/* for loop to be added here */}
             
-                {allCampuses? allCampuses.data.campuses.map(item =>{
-                    console.log(item.campusID)
+                {allCampuses? allCampuses.data.map(item =>{
+                    console.log(item.id)
                     return (
-                        <Link to={`/Campus/${item.campusID}`}>
+                        <Link to={`/Campus/${item.id}`}>
                         <div className="campus-box">
                             <table className="camp-tbl">
                                 <tr>
                                     <td className="camp-img-td">
-                                        <img src={item.campusImg} className="camp-img" />
+                                        <img src={item.imageUrl} className="camp-img" />
                                     </td>
                                     <td>
-                                        <h3 className="camp-name">{item.campusName}  </h3>
+                                        <h3 className="camp-name">{item.name}  </h3>
                                         <p className="camp-p">{item.enrolled} </p>
                                         <div>
                                             <p className="camp-ed"> <Link to ="/EditCampus">Edit</Link></p>
