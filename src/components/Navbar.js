@@ -21,7 +21,7 @@ export default function Navbar(){
         <div id="nav-bar">
             <Link to="/" style={homeLinkStyle}>Home</Link>
             <Link to="/Students" style={linkStyle}>Students</Link>
-            <Link to="/" style={linkStyle}>Campuses</Link>
+            <Link to="/Campuses" style={linkStyle}>Campuses</Link>
         </div>
     )
 }

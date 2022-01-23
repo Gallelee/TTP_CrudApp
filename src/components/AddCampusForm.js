@@ -1,9 +1,12 @@
 import React from "react"
 import Axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 
 export default function AddCampus(){
 
+
+    const navigate = useNavigate()
 
     const handleSubmit = (ev) => {
         ev.preventDefault()
@@ -11,11 +14,15 @@ export default function AddCampus(){
             name: ev.target[0].value,
             address: ev.target[1].value
         })
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+        
+        navigate("/Campuses")
     }
 
 
     return(
-        <form onSubmit={() => handleSubmit()}>
+        <form onSubmit={handleSubmit}>
             <label>Campus Name</label>
             <input type="text"/>
             <label>Address</label>
