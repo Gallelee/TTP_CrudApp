@@ -6,12 +6,6 @@ import {Link} from "react-router-dom"
 export default function CampusCard(props){
 
 
-    /* function deleteHandler(){
-        Axios.delete(`https://ttpcrup-app.herokuapp.com/api/campuses/${props.id}`)
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
-    */
-
     return(
         <Link to={`/Campus/${props.id}`}>
         <div id="campus-card">
@@ -20,7 +14,6 @@ export default function CampusCard(props){
             </div>
             <h2>{props.name}</h2>
             <Link to="/EditCampus">Edit</Link>
-            <button >Delete</button>
         </div>
         </Link>
     )
