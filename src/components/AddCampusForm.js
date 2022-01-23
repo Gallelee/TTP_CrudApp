@@ -12,6 +12,7 @@ export default function AddCampus(){
             <input type="text"/>
             <label>Address</label>
             <input type="text"/>
+            <input type="submit"/>
         </form>
     )
 }
