@@ -41,6 +41,7 @@ code {
 
 .camp-tbl {
   border: solid black 1px;
+  border-radius: 5px;
 }
 
 .camp-img{
