@@ -23,7 +23,7 @@ export default function EditSingleStudent(){
         })
         .then(res => console.log(res))
         .catch(err => console.log(err))
-        navigate(-1)
+        setTimeout(()=>navigate(-1),500)
     }
 
     const handleImageUrl = (ev) => {

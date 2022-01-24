@@ -19,7 +19,7 @@ export default function AddStudentForm(){
                 
                 console.log(err)
             })
-            navigate(-1)
+            setTimeout(()=> navigate(-1),500)
             
         }
   
