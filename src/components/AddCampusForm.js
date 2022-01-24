@@ -17,7 +17,7 @@ export default function AddCampus(){
         .then(res => console.log(res))
         .catch(err => console.log(err))
         
-        setTimeout(() => navigate("/Campuses"),1000)
+        navigate(-1)
     }
 
 

@@ -52,7 +52,7 @@ export default function All_Campuses(){
                                         <h3 className="camp-name">{item.name}  </h3>
                                         <p className="camp-p">{item.enrolled} </p>
                                         <div>
-                                            <p className="camp-ed"> <Link to ="/EditCampus">Edit</Link></p>
+                                            <p className="camp-ed"> <Link to ={`/EditCampus/${item.id}`}>Edit</Link></p>
                                             <button className="camp-del" onClick={(ev) => {
                                                                             ev.preventDefault()
                                                                             Axios.delete(`https://ttpcrup-app.herokuapp.com/api/campuses/${item.id}`)//onclick for deleting the campus

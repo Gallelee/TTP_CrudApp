@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import Axios from "axios"
 import { useParams, useNavigate } from "react-router-dom"
 
 export default function EditSingleStudent(){
 
     const studentId = useParams()
+
+    const [imageUrl, setImageUrl] = useState(null)
 
     const navigate = useNavigate()
 
@@ -16,10 +18,17 @@ export default function EditSingleStudent(){
             firstName: ev.target[0].value,
             lastName: ev.target[1].value,
             gpa: ev.target[2].value,
+            imageUrl: imageUrl? imageUrl : "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
+
         })
         .then(res => console.log(res))
         .catch(err => console.log(err))
-        navigate(`/Students/${studentId.id}`)
+        navigate(-1)
+    }
+
+    const handleImageUrl = (ev) => {
+        setImageUrl(ev.target.value)
+        console.log(imageUrl)
     }
 
     
@@ -30,7 +39,7 @@ export default function EditSingleStudent(){
                 <input type="text" placeholder="First Name"/>
                 <input type="text" placeholder="Last Name"/>
                 <input type="number" step="0.1" min="0" max="4" placeholder="GPA"/>
-                <input type="text" placeholder="Student image Url"/>
+                <input type="text" placeholder="Student image Url" onChange={handleImageUrl}/>
                 <input type="submit"/>
             </form>
 
