@@ -42,7 +42,7 @@ export default function EditSingleStudent(){
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="First Name"/>
                 <input type="text" placeholder="Last Name"/>
-                <input type="text" placeholder="Email"/>
+                <input type="text" placeholder="Email "/>
                 <input type="number" step="0.1" min="0" max="4" placeholder="GPA"/>
                 <input type="text" placeholder="Student image Url" onChange={handleImageUrl}/>
                 <input type="submit"/>
