@@ -19,7 +19,7 @@ export default function ShowCampuses(){
         async function getCampus(){
             const camp = await Axios.get(`https://ttpcrup-app.herokuapp.com/api/campuses/${campusID.campusID}`)
             setCampus(camp)
-            console.log(camp)
+            //console.log(camp)
         }
         getCampus()
     }, [])
@@ -50,18 +50,20 @@ export default function ShowCampuses(){
             campusId : campusID.campusID
             }).then(
             navigate(0)
-            )
+            ).catch(error => {
+                console.log(error.message)
+            })
         }
         
     }
 
 
-    console.log(campusID)
+    //console.log(campusID)
     
     return(
         <div id="campus">
             <div id="campus-page-info">        
-            <img src={campus? campus.data.imageUrl : noImage}/>
+                <img className="campus-page-img"src={campus? campus.data.imageUrl : noImage}/>
                 <div >
                     <h1>{campus? campus.data.name : "N/A"}</h1>
                     <p>{campus? campus.data.description : "N/A"}</p>
@@ -72,11 +74,11 @@ export default function ShowCampuses(){
 
             <div>
                 <form onSubmit={handleSubmit}>
-                    <select>
+                    <select className="dropdown">
                         <option value="none">Select Student</option>
                         {students && loadOptions()}
                     </select>
-                    <button type="submit">Add to Campus</button>
+                    <button className="submit-btn" type="submit">Add to Campus</button>
                 </form>
             </div>
 

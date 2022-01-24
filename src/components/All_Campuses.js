@@ -33,7 +33,7 @@ export default function All_Campuses(){
 
             <div id="camp-top">
                 <h1 id="campus-head"> All Campuses </h1>
-                <button id="add-campus" onClick={ () => handleClick()}>Add Campus </button>
+                <button className="submit-btn" id="add-campus" onClick={ () => handleClick()}>Add Campus </button>
             </div>
 
             {/* for loop to be added here */}
