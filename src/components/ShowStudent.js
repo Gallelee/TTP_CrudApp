@@ -62,7 +62,7 @@ export default function ShowStudent(){
     console.log(studentId)
     
     return(
-        <div>
+        <div className="show-student">
             <div id="student-page">
             
                 <img src={student? student.data.imageUrl : noImage} alt="No image image"/> {/*Placer holder image */}
@@ -71,7 +71,7 @@ export default function ShowStudent(){
                     <h4>Email: {student? student.data.email : "N/A"}</h4>
                     <h4>GPA: {student? student.data.gpa : "N/A"}</h4> 
                     <Link to={`/EditStudent/${studentId.studentId}`}>EDIT</Link>
-                    <button onClick={() => handleDelete()}>Delete</button>
+                    <button className="camp-del"onClick={() => handleDelete()}>Delete</button>
                 </div>
                 
                 
@@ -79,11 +79,11 @@ export default function ShowStudent(){
             {student? (student.data.campusId? <CampusCard id={student.data.campus.id} name={student.data.campus.name} imageUrl={student.data.campus.imageUrl}/> : "This student does not attend a college") : "N/A"}
 
             <form onSubmit={handleSubmit}>
-                <select>
+                <select className="dropdown">
                     <option value="none">Select Campus</option>
                     {campuses && loadOptions()}
                 </select>
-                <button type="submit">Add to Campus</button>
+                <button className="submit-btn" type="submit">Add to Campus</button>
             </form>
         </div>
     )

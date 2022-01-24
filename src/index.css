@@ -61,12 +61,25 @@ code {
 .camp-ed {
   display: inline;
   margin-right: 15px;
+  text-decoration: none;
 
 }
 
 .camp-del {
-  display: inline;
-  margin-left: 15px;
+  /* display: inline;
+  margin-left: 15px; */
+  border: none;
+  height: 35px;
+  width: 100px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: rgb(231, 78, 129);
+  color:white;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: auto;
+  line-height: 10px;
 }
 
 #campus-page-info{
@@ -74,21 +87,33 @@ code {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.campus-page-img{
+  max-width: 600px;
+  margin: 30px
 }
 
 #nav-bar{
-  margin-top: 2%;
-  background-color: lightgray;
+  margin-top: 0;
+  background-color: gray;
   padding-top: 2%;
   padding-bottom: 2%;
+  font-size: 20px;
 }
 
 #students{
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 50px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  row-gap: 40px;
+  justify-content: space-between;
+  padding-bottom: 40px;
 }
 
 .mini-student-card img{
@@ -101,8 +126,9 @@ code {
   border: solid black 1px;
   width: fit-content;
   background-color: lightgray;
-  margin-right: 50px;
+  
 }
+
 
 #students-page a{
   background-color: turquoise;
@@ -144,6 +170,45 @@ input, label{
 }
 
 #camp-stu-card {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  row-gap: 40px;
+  gap: 40px;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.submit-btn{
+  border: none;
+  height: 40px;
+  width: 150px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: turquoise;
+  color:white;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: auto;
+  line-height: 10px;
+}
+
+.dropdown{
+  height:40px;
+  width:200px;
+  border-right: none;
+  margin-right: 5px;
+}
+
+.campus-card-img{
+  width:600px;
+}
+
+.show-student{
+  margin-bottom: 50px;
 }
 

@@ -46,7 +46,7 @@ export default function AddCampus(){
             <label>Address</label>
             <input type="text"/>
             {!isAdress && <p style={{color : "red"}}>Address cannot be empty</p>}
-            <input type="submit"/>
+            <input className="submit-btn" type="submit"/>
         </form>
     )
 }

@@ -7,12 +7,15 @@ const linkStyle = {
     margin: "auto",
     marginLeft: "7%",
     marginRight: "5%",
+    color: "white",
+    
 }
 
 const homeLinkStyle = {
     display: "inline",
     textDecoration: "none",
     marginRight: "40%",
+    color: "white"
 }
 
 export default function Navbar(){

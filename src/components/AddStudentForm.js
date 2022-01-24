@@ -59,9 +59,9 @@ export default function AddStudentForm(){
                 <input type="text"/>
                 {!isLName && <p style={{color : "red"}}>Last name cannot be empty</p>}
                 <label>Email</label>
-                <input type="text"/>
+                <input type="email"/>
                 {!isEmail && <p style={{color : "red"}}>Email needs to be in the example@email.com format</p>}
-                <input type="submit" value="Add Student"/>
+                <input className="submit-btn" type="submit" value="Add Student"/>
             </form>
 
         </div>

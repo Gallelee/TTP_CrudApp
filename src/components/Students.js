@@ -29,7 +29,7 @@ export default function Students(){
                 {allStudents? allStudents.data
                 .map(elm => {
                     return(
-                        <StudentMiniCard id={elm.id} imageUrl={elm.imageUrl} firstName={elm.firstName} lastName={elm.lastName}/>
+                        <StudentMiniCard id={elm.id} imageUrl={elm.imageUrl} firstName={elm.firstName} lastName={elm.lastName}/>  
                     )
                 }) : "Nothing to see here"
             }
