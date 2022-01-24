@@ -56,9 +56,12 @@ export default function All_Campuses(){
                                             <button className="camp-del" onClick={(ev) => {
                                                                             ev.preventDefault()
                                                                             Axios.delete(`https://ttpcrup-app.herokuapp.com/api/campuses/${item.id}`)//onclick for deleting the campus
-                                                                            .then(res => console.log(res))
+                                                                            .then(res => {
+                                                                                navigate(-1)
+                                                                                console.log(res)
+                                                                            })
                                                                             .catch(err => console.log(err))
-                                                                            setTimeout(() => navigate(-1),500)
+                                                                            
                                                                             }
                                             } >Delete</button>
                                         </div>

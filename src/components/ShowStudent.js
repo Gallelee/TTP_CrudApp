@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import {Link, useParams} from "react-router-dom"
+import {Link, useNavigate, useParams} from "react-router-dom"
 import Axios from "axios"
 import noImage from "../images/noImage.png"
 import CampusCard from "./CampusCard"
@@ -8,6 +8,8 @@ export default function ShowStudent(){
     const[student, setStudent] = useState(null)
 
     const studentId = useParams()
+
+    const navigate = useNavigate()
     
 
     useEffect(() => {
@@ -22,7 +24,10 @@ export default function ShowStudent(){
 
     const handleDelete = () => {
         Axios.delete(`https://ttpcrup-app.herokuapp.com/api/students/${studentId.studentId}`)
-        .then(res => console.log(res))
+        .then(res => {
+            navigate(-1)
+            console.log(res)
+        })
         .catch(err => console.log(err))
     }
 

@@ -21,9 +21,12 @@ export default function EditSingleStudent(){
             imageUrl: imageUrl? imageUrl : "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
 
         })
-        .then(res => console.log(res))
+        .then(res => {
+            navigate(-1)
+            console.log(res)}
+            )
         .catch(err => console.log(err))
-        setTimeout(()=>navigate(-1),500)
+        
     }
 
     const handleImageUrl = (ev) => {
