@@ -41,8 +41,9 @@ export default function ShowStudent(){
                     <h4>Email: {student? student.data.email : "N/A"}</h4>
                     <h4>GPA: {student? student.data.gpa : "N/A"}</h4> 
                     <Link to={`/EditStudent/${studentId.studentId}`}>EDIT</Link>
+                    <button onClick={() => handleDelete()}>Delete</button>
                 </div>
-                <button onClick={() => handleDelete()}>Delete</button>
+                
 
             </div>
             {student? (student.data.campusId? <CampusCard id={student.data.campus.id} name={student.data.campus.name} imageUrl={student.data.campus.imageUrl}/> : "This student does not attend a college") : "N/A"}

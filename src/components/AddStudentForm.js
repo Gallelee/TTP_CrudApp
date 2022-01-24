@@ -1,7 +1,10 @@
 import React, { useEffect } from "react"
 import Axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 export default function AddStudentForm(){
+
+        const navigate = useNavigate()
 
         function handleSubmit(ev){
             ev.preventDefault()
@@ -16,6 +19,7 @@ export default function AddStudentForm(){
                 
                 console.log(err)
             })
+            setTimeout(()=> navigate(-1),500)
             
         }
   
