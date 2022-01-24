@@ -11,14 +11,15 @@ export default function EditCampus(){
     const [imageUrl, setImageUrl] = useState(null)
 
     const handleSubmit = (ev) => {
-        Axios.patch(`https://ttpcrup-app.herokuapp.com/api/campuses/${campusID}`,{
+        ev.preventDefault()
+        Axios.patch(`https://ttpcrup-app.herokuapp.com/api/campuses/${campusID.id}`,{
             name: ev.target[0].value,
             address: ev.target[1].value,
             imageUrl: imageUrl? imageUrl : "https://cdn.wallethub.com/wallethub/posts/85332/best-worst-college-towns-in-america.png"
         })
         .then(res => console.log(res))
         .catch(err => console.log(err))
-        navigate(-1)
+        setTimeout(()=>navigate(-1),500)
 
     }
 
