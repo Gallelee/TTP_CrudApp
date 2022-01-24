@@ -48,6 +48,7 @@ export default function EditSingleStudent(){
                 <input type="submit"/>
             </form>
 
+
         </div>
     )
 }

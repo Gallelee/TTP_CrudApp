@@ -4,8 +4,10 @@ import Axios from "axios"
 import noImage from "../images/noImage.png"
 import CampusCard from "./CampusCard"
 
+
 export default function ShowStudent(){
     const[student, setStudent] = useState(null)
+    const [campuses, setCampuses] = useState(null)
 
     const studentId = useParams()
 
@@ -22,6 +24,7 @@ export default function ShowStudent(){
     },[])
 
 
+
     const handleDelete = () => {
         Axios.delete(`https://ttpcrup-app.herokuapp.com/api/students/${studentId.studentId}`)
         .then(res => {
@@ -31,6 +34,28 @@ export default function ShowStudent(){
         .catch(err => console.log(err))
     }
 
+    useEffect(()=>{
+        async function getCampuses(){
+            const data = await Axios.get("https://ttpcrup-app.herokuapp.com/api/campuses/")
+            setCampuses(data)
+        }
+
+        getCampuses()
+    }, [])
+
+    
+    const loadOptions = () => {
+        return campuses.data.map((campus) => <option value={campus.id}>{campus.name}</option>)
+    }
+
+    const handleSubmit = (ev) => {
+        ev.preventDefault()
+        Axios.patch(`https://ttpcrup-app.herokuapp.com/api/students/${studentId.studentId}`,{
+            campusId : (ev.target[0].value != "none")?ev.target[0].value:null
+        }).then(
+            navigate(0)
+        )
+    }
 
     
     console.log(student?student.data.campusId:"nothing")
@@ -49,9 +74,17 @@ export default function ShowStudent(){
                     <button onClick={() => handleDelete()}>Delete</button>
                 </div>
                 
-
+                
             </div>
             {student? (student.data.campusId? <CampusCard id={student.data.campus.id} name={student.data.campus.name} imageUrl={student.data.campus.imageUrl}/> : "This student does not attend a college") : "N/A"}
+
+            <form onSubmit={handleSubmit}>
+                <select>
+                    <option value="none">Select Campus</option>
+                    {campuses && loadOptions()}
+                </select>
+                <button type="submit">Add to Campus</button>
+            </form>
         </div>
     )
 }
