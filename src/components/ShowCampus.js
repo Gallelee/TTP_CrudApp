@@ -73,7 +73,7 @@ export default function ShowCampuses(){
             <div>
                 <form onSubmit={handleSubmit}>
                     <select>
-                        <option value="none">Select Campus</option>
+                        <option value="none">Select Student</option>
                         {students && loadOptions()}
                     </select>
                     <button type="submit">Add to Campus</button>
