@@ -6,7 +6,7 @@ import CampusCard from "./CampusCard"
 
 
 export default function ShowStudent(){
-    const[student, setStudent] = useState(null)
+    const [student, setStudent] = useState(null)
     const [campuses, setCampuses] = useState(null)
 
     const studentId = useParams()

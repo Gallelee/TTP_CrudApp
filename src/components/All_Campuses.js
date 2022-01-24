@@ -54,15 +54,15 @@ export default function All_Campuses(){
                                         <div>
                                             <p className="camp-ed"> <Link to ={`/EditCampus/${item.id}`}>Edit</Link></p>
                                             <button className="camp-del" onClick={(ev) => {
-                                                                            ev.preventDefault()
-                                                                            Axios.delete(`https://ttpcrup-app.herokuapp.com/api/campuses/${item.id}`)//onclick for deleting the campus
-                                                                            .then(res => {
-                                                                                navigate(-1)
-                                                                                console.log(res)
-                                                                            })
-                                                                            .catch(err => console.log(err))
-                                                                            
-                                                                            }
+                                                ev.preventDefault()
+                                                Axios.delete(`https://ttpcrup-app.herokuapp.com/api/campuses/${item.id}`)//onclick for deleting the campus
+                                                .then(res => {
+                                                    navigate(0)
+                                                    console.log(res)
+                                                })
+                                                .catch(err => console.log(err))
+                                                
+                                                }
                                             } >Delete</button>
                                         </div>
                                     </td>
