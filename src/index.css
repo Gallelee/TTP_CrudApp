@@ -85,6 +85,9 @@ code {
 #students{
   display: inline-flex;
   margin-top: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mini-student-card img{

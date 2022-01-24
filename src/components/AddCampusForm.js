@@ -14,10 +14,12 @@ export default function AddCampus(){
             name: ev.target[0].value,
             address: ev.target[1].value
         })
-        .then(res => console.log(res))
+        .then(res => {
+            navigate(-1)
+            console.log(res)}
+            )
         .catch(err => console.log(err))
         
-        setTimeout(()=>navigate(-1),500)
     }
 
 
