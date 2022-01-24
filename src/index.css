@@ -11,3 +11,138 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#camp-top {
+  overflow: hidden;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#campus-head {
+  display:inline;
+  margin-right: 40%;
+  margin-left: 0;
+  
+}
+
+#add-campus {
+  display:inline;
+  margin-left: auto;
+  margin-right: 0;
+  
+}
+
+.campus-box {
+  margin: 10px;
+  padding: 10px;
+  width: 40%;
+  display: inline-block;
+}
+
+.camp-tbl {
+  border: solid black 1px;
+}
+
+.camp-img{
+  padding: 10px;
+  max-width: 95%;
+}
+
+.camp-img-td{
+  width: 65%
+}
+
+.camp-name {
+  margin-bottom: 10px;
+
+}  
+
+.camp-ed {
+  display: inline;
+  margin-right: 15px;
+
+}
+
+.camp-del {
+  display: inline;
+  margin-left: 15px;
+}
+
+#campus-page-info{
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nav-bar{
+  margin-top: 2%;
+  background-color: lightgray;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#students{
+  display: inline-flex;
+  margin-top: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mini-student-card img{
+  height:200px;
+  margin: 30px;
+  background-color: white;
+}
+
+.mini-student-card{
+  border: solid black 1px;
+  width: fit-content;
+  background-color: lightgray;
+  margin-right: 50px;
+}
+
+#students-page a{
+  background-color: turquoise;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+#students a {
+  background-color: white;
+  padding: 0px;
+  border-radius: 0px;
+}
+
+#student-page{
+ display: flex;
+ width: 50%; 
+ margin-left: auto;
+ margin-right: auto;
+ 
+}
+
+#student-page-info{
+  margin-left: 400px;
+}
+
+#student-page img{
+  max-height: 500px;
+}
+
+input, label{
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+#camp-stu-card {
+  display: inline-flex;
+}
+
